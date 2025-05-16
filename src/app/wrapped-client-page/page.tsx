@@ -1,14 +1,13 @@
 import { getCustomers } from "../util/customers";
-import { WithTranslations } from "../util/translations";
+import { getTranslations } from "../util/translations";
 import Page from "./client";
 
 const Page1Wrapped: React.FC = async () => {
+  const translations = await getTranslations(); // Data fetching with ISR
   const customers = await getCustomers();
 
   return (
-    <WithTranslations render={translations => (
-      <Page translations={translations} customers={customers}/>
-    )} />
+    <Page translations={translations} customers={customers}/>
   );
 };
 

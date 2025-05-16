@@ -12,11 +12,3 @@ export const getTranslations = async(): Promise<Translations> => {
 
   return res.json();
 };
-
-export const WithTranslations: React.FC<{
-  render: (translations: Translations) => React.ReactNode;
-}> = async ({ render }) => {
-  const translations = await getTranslations(); // Data fetching with ISR
-
-  return <>{render(translations)}</>;
-};
