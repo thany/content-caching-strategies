@@ -8,6 +8,7 @@ const Home: React.FC = () => {
       <li><Link href="/server-page">Server page</Link></li>
       <li><Link href="/server-page-parallel">Server page (parallel)</Link></li>
       <li><Link href="/server-page-deferred">Server page (deferred)</Link></li>
+      <li><Link href="/cached-computation">Cached computation</Link></li>
     </ul>
   );
 };
