@@ -22,7 +22,7 @@ const Page: React.FC = () => {
   return (
     <>
       <h1>Pure client page</h1>
-      <p>This is a pure client page that uses a <code>useEffect</code> call to fetch the translations on its own. The fetch will still go through Next.js and (in production) the caching strategy is respected as well. However as you might be able to see, there is a split second where translations are unavailable as they haven't been fetched yet.</p>
+      <p>This is a pure client page that uses a <code>useEffect</code> call to fetch the translations and customers on its own. The fetches will still go through Next.js and (in production) the caching strategy is respected as well. However as you might be able to see, there is a split second where data is unavailable as it hasn't been fetched yet.</p>
       <pre>{Object.values(translations ?? {}).join(' — ')}</pre>
       <h2>Customer data that is subject to more frequent changes</h2>
       <p>This data should change with every page reload:</p>

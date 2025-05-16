@@ -8,7 +8,7 @@ const Page: React.FC = async () => {
   return (
     <>
       <h1>Server page</h1>
-      <p>This is a server page that is able to use <code>getTranslations</code> directly. It's the simplest form, but it cannot be a client page, should another component require it.</p>
+      <p>This is a server page that is able to use <code>getTranslations</code> and <code>getCustomers</code> directly. It's the simplest form, but it cannot be a client page, should another component require it.</p>
       <pre>{Object.values(translations).join(' — ')}</pre>
       <h2>Customer data that is subject to more frequent changes</h2>
       <p>This data should change with every page reload:</p>
